@@ -1,3 +1,6 @@
+$y_axis: 200; // equal to y-axis
+$svg_width: 600; // equal to svg#main_chart width
+
 $axis_color: #282829;
 $stat_one_color: #1da1f2;
 $stat_two_color: #66757f;
@@ -17,7 +20,8 @@ $stat_three_color: #001b34;
 }
 
 #chart_container {
-  border: 0.5px solid black;
+  max-width: $svg_width; // equal to svg#main_chart width
+	border: 0.5px solid black;
   margin: 0 auto;
   overflow: scroll;
   @media (min-width: 500px) and (max-width: 599px) {
@@ -50,6 +54,15 @@ path.stat_one {
 	fill: none;
 	stroke-width: 2;
 	stroke: $stat_one_color;
+	stroke-dasharray: 1000; // value longer than actual line
+	stroke-dashoffset: 0;
+	animation: 3s ease-in-out drawLine;
+}
+
+@keyframes drawLine {
+	0% {
+		stroke-dashoffset: 1000; // equal to stroke-dasharray
+	}
 }
 
 circle.stat_one {
@@ -67,12 +80,23 @@ circle.stat_one {
 	color: $stat_three_color;
 }
 
-#bar_area {
-  animation: 1.8s cubic-bezier(.5, .8, .5, 1.75) teaseChart;
+#bar_area rect {
+	animation: 0.8s cubic-bezier(.17,.67,.65,1.34) showBar;
 }
 
-@keyframes teaseChart {
-  50% {
-    transform: translate(-200px);
-  }
+@keyframes showBar {
+	0% {
+		height: 0;
+		y: $y_axis; // equal to y-axis
+	}
 }
+
+// #bar_area {
+//   animation: 1.8s cubic-bezier(.5, .8, .5, 1.75) teaseChart;
+// }
+
+// @keyframes teaseChart {
+//   50% {
+//     transform: translate(-200px);
+//   }
+// }
