@@ -1,0 +1,78 @@
+$axis_color: #282829;
+$stat_one_color: #1da1f2;
+$stat_two_color: #66757f;
+$stat_three_color: #001b34;
+
+#chart_header {
+  padding: 0.2em;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+}
+
+#bar_info {
+  padding-top: 0.2em;
+  font-size: 0.8em;
+}
+
+#chart_container {
+  border: 0.5px solid black;
+  margin: 0 auto;
+  overflow: scroll;
+  @media (min-width: 500px) and (max-width: 599px) {
+    width: 475px;
+  }
+  @media (min-width: 330px) and (max-width: 499px) {
+    width: 320px;
+  }
+  @media (max-width: 329px) {
+    width: 250px;
+  }
+}
+
+.axis_label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: $axis_color;
+}
+
+.axis_line {
+  stroke: $axis_color;
+  stroke-width: 1;
+}
+
+.stat_one {
+	fill: $stat_one_color;
+	color: $stat_one_color;
+}
+
+path.stat_one {
+	fill: none;
+	stroke-width: 2;
+	stroke: $stat_one_color;
+}
+
+circle.stat_one {
+	fill: #1da1f2;
+	stroke: none;
+}
+
+.stat_two {
+	fill: $stat_two_color;
+	color: $stat_two_color;
+}
+
+.stat_three {
+	fill: $stat_three_color;
+	color: $stat_three_color;
+}
+
+#bar_area {
+  animation: 1.8s cubic-bezier(.5, .8, .5, 1.75) teaseChart;
+}
+
+@keyframes teaseChart {
+  50% {
+    transform: translate(-200px);
+  }
+}

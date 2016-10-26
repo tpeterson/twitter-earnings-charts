@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./topline.css">
+  <title>Twitter Earnings - Total Revenue, Ad Revenue, Net Income</title>
+</head>
+
+<body>
+  <div id="chart_header">
+    <div id="chart_title">
+			Twitter's <span class="stat_one">Total Revenue</span>, <span class="stat_two">Advertising Revenue</span> and <span class="stat_three">Net Income</span>
+    </div>
+    <div id="bar_info">Click bars to see figures</div>
+  </div>
+  <div id="chart_container">
+    <svg id="main_chart" width="800" height="400">
+       <line class="axis_line" x1="10" y1="25"
+          x2="10" y2="375"/>
+        <line class="axis_line" x1="10" y1="200"
+           x2="800" y2="200"/>
+        <text id="y_axis_label" class="axis_label" x="5" y="15" text-anchor="left"></text>
+    </svg>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="./topline.js"></script>
+</body>
+
+</html>

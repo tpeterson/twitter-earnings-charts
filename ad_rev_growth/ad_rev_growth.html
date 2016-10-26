@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./ad_rev_growth.css">
+  <title>Twitter Earnings - Ad Revenue Growth</title>
+</head>
+
+<body>
+  <div id="chart_header">
+    <div id="chart_title">
+			Twitter's <span class="stat_one">Advertising Revenue Growth</span>
+    </div>
+    <div id="bar_info">Click dots to see figures</div>
+  </div>
+  <div id="chart_container">
+    <svg id="main_chart" width="500" height="400">
+       <line class="axis_line" x1="10" y1="25"
+          x2="10" y2="300"/>
+        <line class="axis_line" x1="10" y1="300"
+           x2="500" y2="300"/>
+        <text id="y_axis_label" class="axis_label" x="5" y="15" text-anchor="left"></text>
+    </svg>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script src="./ad_rev_growth.js"></script>
+</body>
+
+</html>
