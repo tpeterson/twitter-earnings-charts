@@ -10,7 +10,7 @@
   font-size: 0.8em; }
 
 #chart_container {
-  max-width: 600;
+  max-width: 600px;
   border: 0.5px solid black;
   margin: 0 auto;
   overflow: scroll; }
