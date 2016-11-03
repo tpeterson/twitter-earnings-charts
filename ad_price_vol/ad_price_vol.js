@@ -26,8 +26,8 @@
     'cost_per_engagement': -64
   }, {
     'quarter': 'Q3 2016',
-    'total_engagements': 0,
-    'cost_per_engagement': 0
+    'total_engagements': 91,
+    'cost_per_engagement': -44
   }];
   var xScale = d3.scale.linear().domain([
     0,
@@ -43,7 +43,7 @@
     })
   ]).range([
     0,
-    150
+    175
   ]);
   var bar_width = 25;
   var bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');

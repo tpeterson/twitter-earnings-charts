@@ -26,8 +26,8 @@
     'off_twitter': 53.8
   }, {
     'quarter': 'Q3 2016',
-    'on_twitter': 0,
-    'off_twitter': 0
+    'on_twitter': 487.0,
+    'off_twitter': 58.0
   }];
   var xScale = d3.scale.linear().domain([
     0,

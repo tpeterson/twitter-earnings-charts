@@ -20,7 +20,7 @@
     'advertising_revenue_growth': 18
   }, {
     'quarter': 'Q3 2016',
-    'advertising_revenue_growth': 0
+    'advertising_revenue_growth': 6
   }];
   var xScale = d3.scale.linear().domain([
     0,

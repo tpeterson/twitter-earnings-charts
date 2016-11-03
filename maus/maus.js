@@ -26,8 +26,8 @@
     'maus_us': 66
   }, {
     'quarter': 'Q3 2016',
-    'maus_total': 0,
-    'maus_us': 0
+    'maus_total': 317,
+    'maus_us': 67
   }];
   var xScale = d3.scale.linear().domain([
     0,
