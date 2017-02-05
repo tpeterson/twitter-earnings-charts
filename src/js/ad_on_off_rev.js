@@ -1,6 +1,5 @@
-'use strict';
 (function() {
-  var earnings_stats = [{
+  const earnings_stats = [{
     'quarter': 'Q1 2015',
     'on_twitter': 379,
     'off_twitter': 9.2
@@ -29,14 +28,14 @@
     'on_twitter': 487.0,
     'off_twitter': 58.0
   }];
-  var xScale = d3.scale.linear().domain([
+  const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1
   ]).range([
     25,
     500
   ]);
-  var yScale = d3.scale.linear().domain([
+  const yScale = d3.scaleLinear().domain([
     0,
     d3.max(earnings_stats, function(d) {
       return d.on_twitter;
@@ -45,8 +44,8 @@
     0,
     275
   ]);
-  var bar_width = 25;
-  var bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');
+  const bar_width = 25;
+  const bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');
   bar_area.selectAll('rect.stat_one').data(earnings_stats).enter().append('rect').attr('class', 'stat_one').attr('width', bar_width).attr('height', function(d) {
     return yScale(d.on_twitter);
   }).attr('x', function(d, i) {

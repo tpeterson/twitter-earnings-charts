@@ -1,0 +1,97 @@
+html {
+  background: #001b34;
+  color: #ffffff; }
+
+#chart_header {
+  padding: 0.2em;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5em; }
+
+#bar_info {
+  padding-top: 0.2em;
+  font-size: 0.8em; }
+
+#chart_container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: scroll; }
+  @media (min-width: 500px) and (max-width: 599px) {
+    #chart_container {
+      width: 475px; } }
+  @media (min-width: 330px) and (max-width: 499px) {
+    #chart_container {
+      width: 320px; } }
+  @media (max-width: 329px) {
+    #chart_container {
+      width: 250px; } }
+
+.axis_label {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  fill: #ffffff; }
+
+.axis_line {
+  stroke: #ffffff;
+  stroke-width: 1; }
+
+.stat_one {
+  fill: #1da1f2;
+  color: #1da1f2; }
+
+path.stat_one {
+  fill: none;
+  stroke-width: 2;
+  stroke: #1da1f2;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 0;
+  -webkit-animation: 3s ease-in-out drawLine;
+          animation: 3s ease-in-out drawLine; }
+
+circle.stat_one {
+  fill: #1da1f2;
+  stroke: none; }
+
+.stat_two {
+  fill: #e0245e;
+  color: #e0245e; }
+
+path.stat_two {
+  fill: none;
+  stroke-width: 2;
+  stroke: #e0245e;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 0;
+  -webkit-animation: 3s ease-in-out drawLine;
+          animation: 3s ease-in-out drawLine; }
+
+circle.stat_two {
+  fill: #e0245e;
+  stroke: none; }
+
+.stat_three {
+  fill: #8ba0ad;
+  color: #8ba0ad; }
+
+path.stat_three {
+  fill: none;
+  stroke-width: 2;
+  stroke: #8ba0ad;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 0;
+  -webkit-animation: 3s ease-in-out drawLine;
+          animation: 3s ease-in-out drawLine; }
+
+circle.stat_three {
+  fill: #8ba0ad;
+  stroke: none; }
+
+@-webkit-keyframes drawLine {
+  0% {
+    stroke-dashoffset: 1200; } }
+
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 1200; } }
+
+/*# sourceMappingURL=twitter_earnings_charts.css.map */

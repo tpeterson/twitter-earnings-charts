@@ -1,6 +1,5 @@
-'use strict';
 (function() {
-  var earnings_stats = [{
+  const earnings_stats = [{
     'quarter': 'Q1 2015',
     'total_engagements': 32,
     'cost_per_engagement': 30
@@ -29,14 +28,14 @@
     'total_engagements': 91,
     'cost_per_engagement': -44
   }];
-  var xScale = d3.scale.linear().domain([
+  const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1
   ]).range([
     25,
     500
   ]);
-  var yScale = d3.scale.linear().domain([
+  const yScale = d3.scaleLinear().domain([
     0,
     d3.max(earnings_stats, function(d) {
       return d.total_engagements;
@@ -45,8 +44,8 @@
     0,
     175
   ]);
-  var bar_width = 25;
-  var bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');
+  const bar_width = 25;
+  const bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');
   bar_area.selectAll('rect.stat_one').data(earnings_stats).enter().append('rect').attr('class', 'stat_one').attr('width', bar_width).attr('height', function(d) {
     return yScale(d.total_engagements);
   }).attr('x', function(d, i) {
@@ -67,10 +66,10 @@
   });
   bar_area.selectAll('text.x_label').data(earnings_stats).enter().append('text').attr('class', 'axis_label').text(function(d) {
     return d.quarter;
-  }).attr('y', 200).attr('x', function(d) {
-    return xScale(earnings_stats.indexOf(d)) - 2.5;
+  }).attr('y', 205).attr('x', function(d) {
+    return xScale(earnings_stats.indexOf(d));
   }).attr('transform', function(d) {
-    return 'rotate(-90 ' + (xScale(earnings_stats.indexOf(d)) - 2.5) + ' 200)';
+    return 'rotate(90 ' + (xScale(earnings_stats.indexOf(d))) + ' 205)';
   });
   d3.select('text#y_axis_label').text(d3.max(earnings_stats, function(d) {
     return d.total_engagements;

@@ -1,6 +1,5 @@
-'use strict';
 (function() {
-  var earnings_stats = [{
+  const earnings_stats = [{
     'quarter': 'Q1 2015',
     'advertising_revenue_growth': 72
   }, {
@@ -22,14 +21,14 @@
     'quarter': 'Q3 2016',
     'advertising_revenue_growth': 6
   }];
-  var xScale = d3.scale.linear().domain([
+  const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1
   ]).range([
     25,
-    400
+    500
   ]);
-  var yScale = d3.scale.linear().domain([
+  const yScale = d3.scaleLinear().domain([
     0,
     d3.max(earnings_stats, function(d) {
       return d.advertising_revenue_growth;
@@ -38,8 +37,8 @@
     0,
     275
   ]);
-  var bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');
-  var drawLine = d3.svg.line().x(function(d) {
+  const bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');
+  const drawLine = d3.line().x(function(d) {
     return xScale(earnings_stats.indexOf(d));
   }).y(function(d) {
     return 300 - yScale(d.advertising_revenue_growth);
