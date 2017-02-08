@@ -44,32 +44,51 @@
     0,
     175
   ]);
-  const bar_width = 25;
+
   const bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');
-  bar_area.selectAll('rect.stat_one').data(earnings_stats).enter().append('rect').attr('class', 'stat_one').attr('width', bar_width).attr('height', function(d) {
-    return yScale(d.total_engagements);
-  }).attr('x', function(d, i) {
-    return xScale(earnings_stats.indexOf(d));
-  }).attr('y', function(d) {
-    return 200 - yScale(d.total_engagements);
-  }).on('click', function(d) {
-    d3.select('#bar_info').text('Year-over-year change in total ad engagements in ' + d.quarter + ': ' + d.total_engagements + '%');
-  });
-  bar_area.selectAll('rect.stat_two').data(earnings_stats).enter().append('rect').attr('class', 'stat_two').attr('width', bar_width).attr('height', function(d) {
-    return yScale(Math.abs(d.cost_per_engagement));
-  }).attr('x', function(d, i) {
-    return xScale(earnings_stats.indexOf(d)) + bar_width;
-  }).attr('y', function(d) {
-    return d.cost_per_engagement > 0 ? 200 - yScale(d.cost_per_engagement) : 200;
-  }).on('click', function(d) {
-    d3.select('#bar_info').text('Year-over-year change in average cost per ad engagement in ' + d.quarter + ': ' + d.cost_per_engagement + '%');
-  });
+
+  function plotStat(stat_name, stat_class, stat_label) {
+    const drawLine = d3.line()
+      .x(function(d) {
+        return xScale(earnings_stats.indexOf(d));
+      })
+      .y(function(d) {
+        return 200 - yScale(d[stat_name]);
+      });
+
+    bar_area
+      .append('path')
+      .attr('d', drawLine(earnings_stats))
+      .attr('class', stat_class);
+
+    bar_area.selectAll(`circle${[stat_class]}`)
+      .data(earnings_stats)
+      .enter()
+      .append('circle')
+      .attr('class', stat_class)
+      .attr("cx", function(d) {
+        return xScale(earnings_stats.indexOf(d));
+      })
+      .attr("cy", function(d) {
+        return 200 - yScale(d[stat_name]);
+      })
+      .attr("r", function(d) {
+        return 5;
+      })
+      .on('click', function(d) {
+        d3.select('#bar_info').text(`${stat_label} ${(d[stat_name] >= 0) ? `grew ${d[stat_name]}` : `shrank ${d[stat_name]}`}% year-over-year in ${d.quarter}.`);
+      });
+  }
+
+  plotStat('total_engagements', 'stat_one', 'Number of ad engagements');
+  plotStat('cost_per_engagement', 'stat_two', 'Average cost-per-engagement');
+
   bar_area.selectAll('text.x_label').data(earnings_stats).enter().append('text').attr('class', 'axis_label').text(function(d) {
     return d.quarter;
-  }).attr('y', 205).attr('x', function(d) {
+  }).attr('y', 300).attr('x', function(d) {
     return xScale(earnings_stats.indexOf(d));
   }).attr('transform', function(d) {
-    return 'rotate(90 ' + (xScale(earnings_stats.indexOf(d))) + ' 205)';
+    return 'rotate(90 ' + (xScale(earnings_stats.indexOf(d))) + ' 300)';
   });
   d3.select('text#y_axis_label').text(d3.max(earnings_stats, function(d) {
     return d.total_engagements;

@@ -99,7 +99,7 @@
   document.getElementById('yearly_btn').addEventListener('click', () => {
     buildChart(yoy_stats, 'yoy', 'year-over-year');
   });
-  
+
   function buildChart(full_stats, stat_type, change_type) {
     // RESET CHART
     d3.select('#bar_area').remove();
@@ -127,7 +127,7 @@
     plotStat(maus_stat, 'stat_one', 'Global monthly active users', change_type);
     plotStat(mausUS_stat, 'stat_two', 'U.S. monthly active users', change_type);
 
-    function plotStat(stat_name, stat_class, stat_label) {
+    function plotStat(stat_name, stat_class, stat_label, change_type) {
       const drawLine = d3.line()
         .x(function(d) {
           return xScale(full_stats.indexOf(d));
