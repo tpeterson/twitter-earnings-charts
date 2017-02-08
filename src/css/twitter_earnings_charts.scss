@@ -1,14 +1,14 @@
 $svg_width: 600px; // equal to svg#main_chart width
-
-$axis_color: #ffffff;//#282829;
+$axis_color: #ffffff;
 $stat_one_color: #1da1f2;
 $stat_two_color: #e0245e;
 $stat_three_color: #8ba0ad;
 $bg_color: #001b34;
+$stroke_dash_length: 1200;
 
 html {
-	background: $bg_color;
-	color: $axis_color;
+  background: $bg_color;
+  color: $axis_color;
 }
 
 #chart_header {
@@ -26,7 +26,7 @@ html {
 
 #chart_container {
   max-width: $svg_width; // equal to svg#main_chart width
-	// border: 0.5px solid black;
+  // border: 0.5px solid black;
   margin: 0 auto;
   overflow: scroll;
   @media (min-width: 500px) and (max-width: 599px) {
@@ -51,64 +51,80 @@ html {
 }
 
 .stat_one {
-	fill: $stat_one_color;
-	color: $stat_one_color;
+  fill: $stat_one_color;
+  color: $stat_one_color;
 }
 
 path.stat_one {
-	fill: none;
-	stroke-width: 2;
-	stroke: $stat_one_color;
-	stroke-dasharray: 1200; // value longer than actual line
-	stroke-dashoffset: 0;
-	animation: 3s ease-in-out drawLine;
+  fill: none;
+  stroke-width: 2;
+  stroke: $stat_one_color;
+  stroke-dasharray: $stroke_dash_length; // value longer than actual line
+  stroke-dashoffset: 0;
+  animation: 3s ease-in-out drawLine;
 }
 
 circle.stat_one {
-	fill: $stat_one_color;
-	stroke: none;
+  fill: $stat_one_color;
+  stroke: none;
 }
 
 .stat_two {
-	fill: $stat_two_color;
-	color: $stat_two_color;
+  fill: $stat_two_color;
+  color: $stat_two_color;
 }
 
 path.stat_two {
-	fill: none;
-	stroke-width: 2;
-	stroke: $stat_two_color;
-	stroke-dasharray: 1200; // value longer than actual line
-	stroke-dashoffset: 0;
-	animation: 3s ease-in-out drawLine;
+  fill: none;
+  stroke-width: 2;
+  stroke: $stat_two_color;
+  stroke-dasharray: $stroke_dash_length; // value longer than actual line
+  stroke-dashoffset: 0;
+  animation: 3s ease-in-out drawLine;
 }
 
 circle.stat_two {
-	fill: $stat_two_color;
-	stroke: none;
+  fill: $stat_two_color;
+  stroke: none;
 }
 
 .stat_three {
-	fill: $stat_three_color;
-	color: $stat_three_color;
+  fill: $stat_three_color;
+  color: $stat_three_color;
 }
 
 path.stat_three {
-	fill: none;
-	stroke-width: 2;
-	stroke: $stat_three_color;
-	stroke-dasharray: 1200; // value longer than actual line
-	stroke-dashoffset: 0;
-	animation: 3s ease-in-out drawLine;
+  fill: none;
+  stroke-width: 2;
+  stroke: $stat_three_color;
+  stroke-dasharray: $stroke_dash_length; // value longer than actual line
+  stroke-dashoffset: 0;
+  animation: 3s ease-in-out drawLine;
 }
 
 circle.stat_three {
-	fill: $stat_three_color;
-	stroke: none;
+  fill: $stat_three_color;
+  stroke: none;
+}
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: $stroke_dash_length; // equal to stroke-dasharray
+  }
 }
 
-@keyframes drawLine {
-	0% {
-		stroke-dashoffset: 1200; // equal to stroke-dasharray
-	}
+#chart_buttons {
+  margin: 0.2em 0em 0.2em 0em;
+}
+
+.chart_btn {
+  border: 2px solid $axis_color;
+  border-radius: 1em;
+  background-color: $axis_color;
+  color: $bg_color;
+  font-size: 1em;
+
+  &:focus {
+    background-color: $bg_color;
+    color: $axis_color;
+  }
 }

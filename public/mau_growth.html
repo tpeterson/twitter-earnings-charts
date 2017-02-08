@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="./css/twitter_earnings_charts.css">
+  <title>Twitter Earnings - Monthly Active User Growth</title>
+</head>
+
+<body>
+  <div id="chart_header">
+    <div id="chart_title">
+      Twitter's <span class="stat_one">Global</span> and <span class="stat_two">U.S.</span> Monthly Active User Growth
+    </div>
+    <div id="chart_buttons">
+      <button id="yearly_btn" class="chart_btn">Year-over-year</button>
+      <button id="quarterly_btn" class="chart_btn">Quarter-over-quarter</button>
+    </div>
+    <input type="checkbox" id="global_box" class="menu_box" checked>
+    <label for="global_box" class="stat_one">Global</label>
+    <input type="checkbox" id="us_box" class="menu_box" checked>
+    <label for="us_box" class="stat_two">U.S.</label>
+    <div id="bar_info">Click dots to see figures</div>
+  </div>
+  <div id="chart_container">
+    <svg id="main_chart" width="600" height="400">
+       <line class="axis_line" x1="10" y1="25"
+          x2="10" y2="300"/>
+        <line class="axis_line" x1="10" y1="250"
+           x2="600" y2="250"/>
+        <text id="y_axis_label" class="axis_label" x="5" y="15" text-anchor="left"></text>
+    </svg>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+  <script src="./js/mau_growth.js"></script>
+</body>
+
+</html>

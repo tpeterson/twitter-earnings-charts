@@ -94,4 +94,17 @@ circle.stat_three {
   0% {
     stroke-dashoffset: 1200; } }
 
+#chart_buttons {
+  margin: 0.2em 0em 0.2em 0em; }
+
+.chart_btn {
+  border: 2px solid #ffffff;
+  border-radius: 1em;
+  background-color: #ffffff;
+  color: #001b34;
+  font-size: 1em; }
+  .chart_btn:focus {
+    background-color: #001b34;
+    color: #ffffff; }
+
 /*# sourceMappingURL=twitter_earnings_charts.css.map */
