@@ -27,6 +27,10 @@
     'quarter': 'Q3 2016',
     'total_engagements': 91,
     'cost_per_engagement': -44
+  }, {
+    'quarter': 'Q4 2016',
+    'total_engagements': 151,
+    'cost_per_engagement': -60
   }];
   const xScale = d3.scaleLinear().domain([
     0,

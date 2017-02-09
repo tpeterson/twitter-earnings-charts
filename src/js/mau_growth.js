@@ -83,6 +83,12 @@
     "mausUS_qoq": 1.52,
     "maus_yoy": 3.26,
     "mausUS_yoy": 1.52
+  }, {
+    "quarter": "Q4 2016",
+    "maus_qoq": 0.63,
+    "mausUS_qoq": 0.00,
+    "maus_yoy": 4.59,
+    "mausUS_yoy": 3.07
   }];
   // SEPARATE QUARTERLY AND YEARLY STATS
   const qoq_stats = earnings_stats;

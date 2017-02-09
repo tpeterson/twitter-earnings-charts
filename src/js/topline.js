@@ -34,7 +34,13 @@
     'total_revenue': 615.9,
     'advertising_revenue': 545.0,
     'net_income': -103
-  }];
+  },
+{
+  'quarter': 'Q4 2016',
+  'total_revenue': 717.2,
+  'advertising_revenue': 637.8,
+  'net_income': -167
+}];
   const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1

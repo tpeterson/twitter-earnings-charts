@@ -20,6 +20,9 @@
   }, {
     'quarter': 'Q3 2016',
     'advertising_revenue_growth': 6
+  }, {
+    'quarter': 'Q4 2016',
+    'advertising_revenue_growth': 0
   }];
   const xScale = d3.scaleLinear().domain([
     0,
