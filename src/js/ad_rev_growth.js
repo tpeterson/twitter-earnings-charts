@@ -1,6 +1,6 @@
 (function() {
   // ADJUST IN CASE AD REVENUE GROWTH TURNS NEGATIVE IN Q1
-  const yAxisPoint = 300; // 250 if negative
+  const yAxisPoint = 300; // 300 if positive or flat, 250 if negative
 
   const earnings_stats = [{
       'quarter': 'Q1 2015',
@@ -47,28 +47,22 @@
   ]).range([
     0,
     yAxisPoint - 25
-    //225
-    //275
   ]);
   const bar_area = d3.select('#main_chart').append('g').attr('id', 'bar_area');
   const drawLine = d3.line().x(function(d) {
     return xScale(earnings_stats.indexOf(d));
   }).y(function(d) {
     return yAxisPoint - yScale(d.advertising_revenue_growth);
-    // return 300 - yScale(d.advertising_revenue_growth);
-    // return 250 - yScale(d.advertising_revenue_growth);
   });
   bar_area.append('path').attr('d', drawLine(earnings_stats)).attr('class', 'stat_one');
   bar_area.selectAll('circle.stat_one').data(earnings_stats).enter().append('circle').attr('class', 'stat_one').attr('cx', function(d) {
     return xScale(earnings_stats.indexOf(d));
   }).attr('cy', function(d) {
     return yAxisPoint - yScale(d.advertising_revenue_growth);
-    // return 300 - yScale(d.advertising_revenue_growth);
-    // return 250 - yScale(d.advertising_revenue_growth);
   }).attr('r', function(d) {
     return 5;
   }).on('click', function(d) {
-    d3.select('#bar_info').text('Ad revenue in ' + d.quarter + ' increased by: ' + d.advertising_revenue_growth + '% year-over-year');
+    d3.select('#bar_info').text(`Ad revenue in ${d.quarter} ${d.advertising_revenue_growth >= 0 ? 'increased by:' : 'decreased by:'} ${d.advertising_revenue_growth}% year-over-year`);
   });
   bar_area.selectAll('text.x_label').data(earnings_stats).enter().append('text').attr('class', 'axis_label').text(function(d) {
     return d.quarter;
