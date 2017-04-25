@@ -1,37 +1,43 @@
 (function() {
   const earnings_stats = [{
-    'quarter': 'Q1 2015',
-    'on_twitter': 379,
-    'off_twitter': 9.2
-  }, {
-    'quarter': 'Q2 2015',
-    'on_twitter': 417.8,
-    'off_twitter': 34.5
-  }, {
-    'quarter': 'Q3 2015',
-    'on_twitter': 446.9,
-    'off_twitter': 66
-  }, {
-    'quarter': 'Q4 2015',
-    'on_twitter': 556,
-    'off_twitter': 85
-  }, {
-    'quarter': 'Q1 2016',
-    'on_twitter': 467.3,
-    'off_twitter': 63.4
-  }, {
-    'quarter': 'Q2 2016',
-    'on_twitter': 480.7,
-    'off_twitter': 53.8
-  }, {
-    'quarter': 'Q3 2016',
-    'on_twitter': 487.0,
-    'off_twitter': 58.0
-  }, {
-    'quarter': 'Q4 2016',
-    'on_twitter': 553.0,
-    'off_twitter': 85.0
-  }];
+      'quarter': 'Q1 2015',
+      'on_twitter': 379,
+      'off_twitter': 9.2
+    }, {
+      'quarter': 'Q2 2015',
+      'on_twitter': 417.8,
+      'off_twitter': 34.5
+    }, {
+      'quarter': 'Q3 2015',
+      'on_twitter': 446.9,
+      'off_twitter': 66
+    }, {
+      'quarter': 'Q4 2015',
+      'on_twitter': 556,
+      'off_twitter': 85
+    }, {
+      'quarter': 'Q1 2016',
+      'on_twitter': 467.3,
+      'off_twitter': 63.4
+    }, {
+      'quarter': 'Q2 2016',
+      'on_twitter': 480.7,
+      'off_twitter': 53.8
+    }, {
+      'quarter': 'Q3 2016',
+      'on_twitter': 487.0,
+      'off_twitter': 58.0
+    }, {
+      'quarter': 'Q4 2016',
+      'on_twitter': 553.0,
+      'off_twitter': 85.0
+    },
+    {
+      'quarter': 'Q1 2017',
+      'on_twitter': 0.0,
+      'off_twitter': 0.0
+    }
+  ];
   const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1

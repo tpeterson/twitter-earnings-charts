@@ -1,37 +1,43 @@
 (function() {
   const earnings_stats = [{
-    'quarter': 'Q1 2015',
-    'maus_total': 302,
-    'maus_us': 65
-  }, {
-    'quarter': 'Q2 2015',
-    'maus_total': 304,
-    'maus_us': 65
-  }, {
-    'quarter': 'Q3 2015',
-    'maus_total': 307,
-    'maus_us': 66
-  }, {
-    'quarter': 'Q4 2015',
-    'maus_total': 305,
-    'maus_us': 65
-  }, {
-    'quarter': 'Q1 2016',
-    'maus_total': 310,
-    'maus_us': 65
-  }, {
-    'quarter': 'Q2 2016',
-    'maus_total': 313,
-    'maus_us': 66
-  }, {
-    'quarter': 'Q3 2016',
-    'maus_total': 317,
-    'maus_us': 67
-  }, {
-    'quarter': 'Q4 2016',
-    'maus_total': 319,
-    'maus_us': 67
-  }];
+      'quarter': 'Q1 2015',
+      'maus_total': 302,
+      'maus_us': 65
+    }, {
+      'quarter': 'Q2 2015',
+      'maus_total': 304,
+      'maus_us': 65
+    }, {
+      'quarter': 'Q3 2015',
+      'maus_total': 307,
+      'maus_us': 66
+    }, {
+      'quarter': 'Q4 2015',
+      'maus_total': 305,
+      'maus_us': 65
+    }, {
+      'quarter': 'Q1 2016',
+      'maus_total': 310,
+      'maus_us': 65
+    }, {
+      'quarter': 'Q2 2016',
+      'maus_total': 313,
+      'maus_us': 66
+    }, {
+      'quarter': 'Q3 2016',
+      'maus_total': 317,
+      'maus_us': 67
+    }, {
+      'quarter': 'Q4 2016',
+      'maus_total': 319,
+      'maus_us': 67
+    },
+    {
+      'quarter': 'Q1 2017',
+      'maus_total': 0,
+      'maus_us': 0
+    }
+  ];
   const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1

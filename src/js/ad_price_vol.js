@@ -1,37 +1,43 @@
 (function() {
   const earnings_stats = [{
-    'quarter': 'Q1 2015',
-    'total_engagements': 32,
-    'cost_per_engagement': 30
-  }, {
-    'quarter': 'Q2 2015',
-    'total_engagements': 53,
-    'cost_per_engagement': 6
-  }, {
-    'quarter': 'Q3 2015',
-    'total_engagements': 165,
-    'cost_per_engagement': -39
-  }, {
-    'quarter': 'Q4 2015',
-    'total_engagements': 153,
-    'cost_per_engagement': -41
-  }, {
-    'quarter': 'Q1 2016',
-    'total_engagements': 208,
-    'cost_per_engagement': -56
-  }, {
-    'quarter': 'Q2 2016',
-    'total_engagements': 226,
-    'cost_per_engagement': -64
-  }, {
-    'quarter': 'Q3 2016',
-    'total_engagements': 91,
-    'cost_per_engagement': -44
-  }, {
-    'quarter': 'Q4 2016',
-    'total_engagements': 151,
-    'cost_per_engagement': -60
-  }];
+      'quarter': 'Q1 2015',
+      'total_engagements': 32,
+      'cost_per_engagement': 30
+    }, {
+      'quarter': 'Q2 2015',
+      'total_engagements': 53,
+      'cost_per_engagement': 6
+    }, {
+      'quarter': 'Q3 2015',
+      'total_engagements': 165,
+      'cost_per_engagement': -39
+    }, {
+      'quarter': 'Q4 2015',
+      'total_engagements': 153,
+      'cost_per_engagement': -41
+    }, {
+      'quarter': 'Q1 2016',
+      'total_engagements': 208,
+      'cost_per_engagement': -56
+    }, {
+      'quarter': 'Q2 2016',
+      'total_engagements': 226,
+      'cost_per_engagement': -64
+    }, {
+      'quarter': 'Q3 2016',
+      'total_engagements': 91,
+      'cost_per_engagement': -44
+    }, {
+      'quarter': 'Q4 2016',
+      'total_engagements': 151,
+      'cost_per_engagement': -60
+    },
+    {
+      'quarter': 'Q1 2017',
+      'total_engagements': 0,
+      'cost_per_engagement': 0
+    }
+  ];
   const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1

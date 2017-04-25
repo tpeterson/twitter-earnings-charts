@@ -1,29 +1,34 @@
 (function() {
   const earnings_stats = [{
-    'quarter': 'Q1 2015',
-    'advertising_revenue_growth': 72
-  }, {
-    'quarter': 'Q2 2015',
-    'advertising_revenue_growth': 63
-  }, {
-    'quarter': 'Q3 2015',
-    'advertising_revenue_growth': 60
-  }, {
-    'quarter': 'Q4 2015',
-    'advertising_revenue_growth': 48
-  }, {
-    'quarter': 'Q1 2016',
-    'advertising_revenue_growth': 37
-  }, {
-    'quarter': 'Q2 2016',
-    'advertising_revenue_growth': 18
-  }, {
-    'quarter': 'Q3 2016',
-    'advertising_revenue_growth': 6
-  }, {
-    'quarter': 'Q4 2016',
-    'advertising_revenue_growth': 0
-  }];
+      'quarter': 'Q1 2015',
+      'advertising_revenue_growth': 72
+    }, {
+      'quarter': 'Q2 2015',
+      'advertising_revenue_growth': 63
+    }, {
+      'quarter': 'Q3 2015',
+      'advertising_revenue_growth': 60
+    }, {
+      'quarter': 'Q4 2015',
+      'advertising_revenue_growth': 48
+    }, {
+      'quarter': 'Q1 2016',
+      'advertising_revenue_growth': 37
+    }, {
+      'quarter': 'Q2 2016',
+      'advertising_revenue_growth': 18
+    }, {
+      'quarter': 'Q3 2016',
+      'advertising_revenue_growth': 6
+    }, {
+      'quarter': 'Q4 2016',
+      'advertising_revenue_growth': 0
+    },
+    {
+      'quarter': 'Q1 2017',
+      'advertising_revenue_growth': 0
+    }
+  ];
   const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1

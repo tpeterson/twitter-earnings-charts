@@ -1,46 +1,53 @@
 (function() {
   const earnings_stats = [{
-    'quarter': 'Q1 2015',
-    'total_revenue': 436,
-    'advertising_revenue': 388.2,
-    'net_income': -162.4
-  }, {
-    'quarter': 'Q2 2015',
-    'total_revenue': 502.4,
-    'advertising_revenue': 452.3,
-    'net_income': -136.7
-  }, {
-    'quarter': 'Q3 2015',
-    'total_revenue': 569.2,
-    'advertising_revenue': 512.9,
-    'net_income': -131.7
-  }, {
-    'quarter': 'Q4 2015',
-    'total_revenue': 710.5,
-    'advertising_revenue': 640.7,
-    'net_income': -90.2
-  }, {
-    'quarter': 'Q1 2016',
-    'total_revenue': 594.5,
-    'advertising_revenue': 530.7,
-    'net_income': -79.7
-  }, {
-    'quarter': 'Q2 2016',
-    'total_revenue': 602,
-    'advertising_revenue': 534.5,
-    'net_income': -107.2
-  }, {
-    'quarter': 'Q3 2016',
-    'total_revenue': 615.9,
-    'advertising_revenue': 545.0,
-    'net_income': -103
-  },
-{
-  'quarter': 'Q4 2016',
-  'total_revenue': 717.2,
-  'advertising_revenue': 637.8,
-  'net_income': -167
-}];
+      'quarter': 'Q1 2015',
+      'total_revenue': 436,
+      'advertising_revenue': 388.2,
+      'net_income': -162.4
+    }, {
+      'quarter': 'Q2 2015',
+      'total_revenue': 502.4,
+      'advertising_revenue': 452.3,
+      'net_income': -136.7
+    }, {
+      'quarter': 'Q3 2015',
+      'total_revenue': 569.2,
+      'advertising_revenue': 512.9,
+      'net_income': -131.7
+    }, {
+      'quarter': 'Q4 2015',
+      'total_revenue': 710.5,
+      'advertising_revenue': 640.7,
+      'net_income': -90.2
+    }, {
+      'quarter': 'Q1 2016',
+      'total_revenue': 594.5,
+      'advertising_revenue': 530.7,
+      'net_income': -79.7
+    }, {
+      'quarter': 'Q2 2016',
+      'total_revenue': 602,
+      'advertising_revenue': 534.5,
+      'net_income': -107.2
+    }, {
+      'quarter': 'Q3 2016',
+      'total_revenue': 615.9,
+      'advertising_revenue': 545.0,
+      'net_income': -103
+    },
+    {
+      'quarter': 'Q4 2016',
+      'total_revenue': 717.2,
+      'advertising_revenue': 637.8,
+      'net_income': -167
+    },
+    {
+      'quarter': 'Q1 2017',
+      'total_revenue': 0,
+      'advertising_revenue': 0,
+      'net_income': 0
+    }
+  ];
   const xScale = d3.scaleLinear().domain([
     0,
     earnings_stats.length - 1
