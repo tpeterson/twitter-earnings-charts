@@ -1,6 +1,6 @@
 (function() {
   // ADJUST IN CASE AD REVENUE GROWTH TURNS NEGATIVE IN Q1
-  const yAxisPoint = 300; // 300 if positive or flat, 250 if negative
+  const yAxisPoint = 250;
 
   const earnings_stats = [{
       'quarter': 'Q1 2015',
@@ -29,7 +29,7 @@
     },
     {
       'quarter': 'Q1 2017',
-      'advertising_revenue_growth': 0
+      'advertising_revenue_growth': -11
     }
   ];
   const xScale = d3.scaleLinear().domain([

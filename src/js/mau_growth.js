@@ -92,10 +92,10 @@
     },
     {
       "quarter": "Q1 2017",
-      "maus_qoq": 0.00,
-      "mausUS_qoq": 0.00,
-      "maus_yoy": 0.00,
-      "mausUS_yoy": 0.00
+      "maus_qoq": 2.82,
+      "mausUS_qoq": 4.48,
+      "maus_yoy": 5.81,
+      "mausUS_yoy": 7.69
     }
   ];
   // SEPARATE QUARTERLY AND YEARLY STATS
