@@ -96,6 +96,13 @@
       "mausUS_qoq": 4.48,
       "maus_yoy": 5.81,
       "mausUS_yoy": 7.69
+    },
+    {
+      "quarter": "Q2 2017",
+      "maus_qoq": 0.00,
+      "mausUS_qoq": -2.86,
+      "maus_yoy": 4.79,
+      "mausUS_yoy": 3.03
     }
   ];
   // SEPARATE QUARTERLY AND YEARLY STATS

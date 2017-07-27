@@ -46,6 +46,12 @@
       'total_revenue': 548.3,
       'advertising_revenue': 473.8,
       'net_income': -61.6
+    },
+    {
+      'quarter': 'Q2 2017',
+      'total_revenue': 573.9,
+      'advertising_revenue': 489.1,
+      'net_income': -107
     }
   ];
   const xScale = d3.scaleLinear().domain([
