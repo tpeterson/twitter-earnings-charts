@@ -33,6 +33,10 @@
     {
       'quarter': 'Q2 2017',
       'advertising_revenue_growth': -8
+    },
+    {
+      'quarter': 'Q3 2017',
+      'advertising_revenue_growth': 0
     }
   ];
   const xScale = d3.scaleLinear().domain([

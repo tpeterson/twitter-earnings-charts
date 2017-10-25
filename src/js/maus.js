@@ -41,6 +41,11 @@
       'quarter': 'Q2 2017',
       'maus_total': 328,
       'maus_us': 68
+    },
+    {
+      'quarter': 'Q3 2017',
+      'maus_total': 0,
+      'maus_us': 0
     }
   ];
   const xScale = d3.scaleLinear().domain([
