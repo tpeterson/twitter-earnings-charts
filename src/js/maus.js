@@ -29,23 +29,23 @@
       'maus_us': 67
     }, {
       'quarter': 'Q4 2016',
-      'maus_total': 319,
+      'maus_total': 318,
       'maus_us': 67
     },
     {
       'quarter': 'Q1 2017',
-      'maus_total': 328,
-      'maus_us': 70
+      'maus_total': 327,
+      'maus_us': 69
     },
     {
       'quarter': 'Q2 2017',
-      'maus_total': 328,
+      'maus_total': 326,
       'maus_us': 68
     },
     {
       'quarter': 'Q3 2017',
-      'maus_total': 0,
-      'maus_us': 0
+      'maus_total': 330,
+      'maus_us': 69
     }
   ];
   const xScale = d3.scaleLinear().domain([

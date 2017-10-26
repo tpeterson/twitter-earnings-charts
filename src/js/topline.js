@@ -55,9 +55,9 @@
     },
     {
       'quarter': 'Q3 2017',
-      'total_revenue': 0,
-      'advertising_revenue': 0,
-      'net_income': 0
+      'total_revenue': 589.6,
+      'advertising_revenue': 502.8,
+      'net_income': -21.1
     }
   ];
   const xScale = d3.scaleLinear().domain([

@@ -44,8 +44,8 @@
     },
     {
       'quarter': 'Q3 2017',
-      'total_engagements': 0,
-      'cost_per_engagement': 0
+      'total_engagements': 99,
+      'cost_per_engagement': -54
     }
   ];
   const xScale = d3.scaleLinear().domain([

@@ -85,31 +85,31 @@
       "mausUS_yoy": 1.52
     }, {
       "quarter": "Q4 2016",
-      "maus_qoq": 0.63,
+      "maus_qoq": 0.32,
       "mausUS_qoq": 0.00,
-      "maus_yoy": 4.59,
+      "maus_yoy": 4.26,
       "mausUS_yoy": 3.07
     },
     {
       "quarter": "Q1 2017",
-      "maus_qoq": 2.82,
-      "mausUS_qoq": 4.48,
-      "maus_yoy": 5.81,
-      "mausUS_yoy": 7.69
+      "maus_qoq": 2.83,
+      "mausUS_qoq": 3.00,
+      "maus_yoy": 5.48,
+      "mausUS_yoy": 6.15
     },
     {
       "quarter": "Q2 2017",
-      "maus_qoq": 0.00,
+      "maus_qoq": -0.30,
       "mausUS_qoq": -2.86,
-      "maus_yoy": 4.79,
+      "maus_yoy": 4.15,
       "mausUS_yoy": 3.03
     },
     {
       "quarter": "Q3 2017",
-      "maus_qoq": 0,
-      "mausUS_qoq": 0,
-      "maus_yoy": 0,
-      "mausUS_yoy": 0
+      "maus_qoq": 1.23,
+      "mausUS_qoq": 1.47,
+      "maus_yoy": 4.10,
+      "mausUS_yoy": 3.00
     }
   ];
   // SEPARATE QUARTERLY AND YEARLY STATS
